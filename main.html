@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>BASLIK</h1>
+    </header>
+    <div class="container">
+      <div class="icerik_1">
+        <p>icerik_1</p>
+      </div>
+      <div class="icerik_2">
+        <form id="Mform" action="main2.html" method="post">
+          <ul>
+            <li><input id="isim" type="text" placeholder="AD" required></li>
+            <li><input id="email" type="email" placeholder="E-MAİL" required></li>
+            <li><input id="sifre" type="password" placeholder="SIFRE" required></li>
+            <li><input id="" type="submit" value="GONDER" required></li>
+          </ul>
+        </form>
+      </div>
+      <div class="icerik_3">
+        <ul>
+        <li>AD = Gurkan </li>
+        <li>SİFRE = G1234 </li>
+        <li>MAİL = gurkan@html.com </li>
+        </ul>
+      </div>
+    </div>
+    
+    <script>document.getElementById("Mform").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("isim").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("sifre").value;
+
+    if (name === "Gurkan" && email === "gurkan@html.com" && password === "G1234") {
+        var formAction = "main2.html?isim=" + name + "&sifre=" + password + "&email=" + email;
+    } else {
+        alert("Doğru bilgileri girin!");
+    }
+});    </script>
+  </body>
+</html>
